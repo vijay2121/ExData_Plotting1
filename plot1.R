@@ -1,6 +1,8 @@
 #This R script reads the data between 2007-02-01 and 2007-02-02 and plots the graph.
 #The graph's X-Axis is Global Active Power(killowatts) and Y-Axis is the frequency of values
 
+plotGraph1()
+
 plotGraph1<-function()
 {
         data<-readData()

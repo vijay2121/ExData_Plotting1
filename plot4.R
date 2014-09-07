@@ -2,6 +2,8 @@
 #Different types of graphs are generated with 2 rows and 2 columns. Margin is adjusted
 #such that the graphs appear properly
 
+plotGraph4()
+
 plotGraph4<-function()
 {
         data<-readData()
@@ -18,7 +20,7 @@ plotGraph4<-function()
         with(data,plot(data$dateAndTime,data$Sub_metering_1,col="black", type="s",ylab="Energy sub metering", xlab=""))
         with(data,points(data$dateAndTime,data$Sub_metering_2,col="red", type="s"))
         with(data,points(data$dateAndTime,data$Sub_metering_3,col="blue", type="s"))
-        legend("topright",pch=c(45,45,45),col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+        legend("topright",lty=c(1,1,1),col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
         
         #Draw 4th graph
         plot(data$dateAndTime, data$Global_reactive_power, type="s",  ylab="Global_reactive_power", xlab="datetime")                

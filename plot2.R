@@ -1,11 +1,13 @@
 #This R script reads the data between 2007-02-01 and 2007-02-02 and plots the graph.
 #The graph's X-Axis is Date and Time Y-Axis is Global Active Power(killowatts)
 
+plotGraph2()
+
 plotGraph2<-function()
 {
         data<-readData()        
         png(file="plot2.png")
-        plot(data$dateAndTime, data$Global_active_power, type="s",  ylab="Global Active Power (killowatts)", xlab="")                
+        plot(data$dateAndTime, data$Global_active_power, type="l",  ylab="Global Active Power (killowatts)", xlab="")                
         dev.off()
 }
 

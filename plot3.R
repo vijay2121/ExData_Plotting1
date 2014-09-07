@@ -1,6 +1,8 @@
 #This R script reads the data between 2007-02-01 and 2007-02-02 and plots the graph.
 #The graph's X-Axis is Date and Time Y-Axis is Energy Sub Metering data
 
+plotGraph3()
+ 
 plotGraph3<-function()
 {
         data<-readData()        
@@ -8,7 +10,7 @@ plotGraph3<-function()
         with(data,plot(data$dateAndTime,data$Sub_metering_1,col="black", type="s",ylab="Energy sub metering", xlab=""))
         with(data,points(data$dateAndTime,data$Sub_metering_2,col="red", type="s"))
         with(data,points(data$dateAndTime,data$Sub_metering_3,col="blue", type="s"))
-        legend("topright",pch=c(45,45,45),col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+        legend("topright",lty=c(1,1,1),col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
         dev.off()
 }
 
